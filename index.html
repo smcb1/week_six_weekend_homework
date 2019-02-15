@@ -11,6 +11,7 @@
 <body>
   <h1>Glasgow Social Tracker</h1>
   <div class="container">
+
     <form id="new-item-form">
       <div id="form-wrapper">
         <div class="form-item">
@@ -18,8 +19,8 @@
           <input type="text" id="date" required>
         </div>
         <div class="form-item">
-          <label for="act" class="primary">Name:</label>
-          <input type="text" id="act" required>
+          <label for="name" class="primary">Name:</label>
+          <input type="text" id="name" required>
         </div>
         <div class="form-item">
           <label for="venue" class="primary">Venue:</label>
@@ -28,10 +29,10 @@
         <div class="form-item">
           <label for="genre" class="primary">Genre:</label>
           <select id="category">
-            <option value="comedy" selected>Comedy</option>
-            <option value="music">Music</option>
-            <option value="film">Film</option>
-            <option value="film">Public Talk</option>
+            <option value="Comedy" selected>Comedy</option>
+            <option value="Music">Music</option>
+            <option value="Film">Film</option>
+            <option value="TED Talk">TED Talk</option>
           </select>
         </div>
         <div class="form-item">
@@ -39,9 +40,12 @@
           <input type="text" id="price" required>
         </div>
       </div>
-      <input type="submit" class="button" value="add"/>
+      <input type="submit" class="button" value="Add Event"/>
     </form>
 
+    <h1>Upcoming Events:</h1>
+    <ul id="social-list"></ul>
+    <button type="button" id="button" class="button">Delete Events</button>
 
   </div>
 </body>
