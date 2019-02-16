@@ -44,10 +44,6 @@ const createEventListItem = function (form) {
   price.textContent = this.price.value;
   eventListItem.appendChild(price);
 
-  // Print event to page
-  // const readingList = document.querySelector('#social-list');
-  // readingList.appendChild(listElement);
-
   return eventListItem;
 
 }

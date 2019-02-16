@@ -63,11 +63,6 @@ ul li {
   padding: 10px;
 }
 
-.table {
-  display: table;   /* Allow the centering to work */
-  margin: 0 auto;
-}
-
 ul#social-lis {
   min-width: 696px;
   list-style: none;
