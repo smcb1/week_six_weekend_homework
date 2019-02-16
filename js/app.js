@@ -23,9 +23,9 @@ const createEventListItem = function (form) {
   const eventListItem = document.createElement('li');
   const horz = document.createElement('hr');
 
-  const name = document.createElement('h3')
-  name.textContent = this.name.value;
-  eventListItem.appendChild(name);
+  const act = document.createElement('h3')
+  act.textContent = this.act.value;
+  eventListItem.appendChild(act);
   eventListItem.appendChild(horz);
 
   const date = document.createElement('p')
