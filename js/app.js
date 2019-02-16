@@ -4,46 +4,57 @@ document.addEventListener('DOMContentLoaded', () => {
   const newItemForm = document.querySelector('#new-item-form')
   newItemForm.addEventListener('submit', handleFormSubmit);
 
-  const button = document.querySelector('#button')
-  button.addEventListener('submit', handleDeleteAllClick);
+  const deleteAllButton = document.querySelector('#delete-button')
+  deleteAllButton.addEventListener('click', handleDeleteAllClick);
 
 });
 
 const handleFormSubmit = function(event) {
   event.preventDefault();
-  const listElement = document.createElement('li');
+
+  const eventListItem = createEventListItem(event.target);
+  const eventList = document.querySelector('#event-list');
+  eventList.appendChild(eventListItem);
+
+  event.target.reset();
+};
+
+const createEventListItem = function (form) {
+  const eventListItem = document.createElement('li');
   const horz = document.createElement('hr');
 
   const name = document.createElement('h3')
   name.textContent = this.name.value;
-  listElement.appendChild(name);
-  listElement.appendChild(horz);
+  eventListItem.appendChild(name);
+  eventListItem.appendChild(horz);
 
   const date = document.createElement('p')
   date.textContent = this.date.value;
-  listElement.appendChild(date);
+  eventListItem.appendChild(date);
 
   const venue = document.createElement('p')
   venue.textContent = this.venue.value;
-  listElement.appendChild(venue);
+  eventListItem.appendChild(venue);
 
   const category = document.createElement('p')
   category.textContent = this.category.value;
-  listElement.appendChild(category);
+  eventListItem.appendChild(category);
 
   const price = document.createElement('p')
   price.textContent = this.price.value;
-  listElement.appendChild(price);
+  eventListItem.appendChild(price);
 
   // Print event to page
-  const readingList = document.querySelector('#social-list');
-  readingList.appendChild(listElement);
+  // const readingList = document.querySelector('#social-list');
+  // readingList.appendChild(listElement);
 
-  this.reset();
-};
+  return eventListItem;
+
+}
+
 
 const handleDeleteAllClick = function (event) {
-  const listElement = document.querySelector('#social-list');
+  const listElement = document.querySelector('#event-list');
   listElement.innerHTML = '';
 }
 
