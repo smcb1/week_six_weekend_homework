@@ -5,21 +5,23 @@ document.addEventListener('DOMContentLoaded', () => {
   newItemForm.addEventListener('submit', handleFormSubmit);
 
   const button = document.querySelector('#button')
-  button.addEventListener('submit', handleButtonClick);
+  button.addEventListener('submit', handleDeleteAllClick);
 
 });
 
 const handleFormSubmit = function(event) {
   event.preventDefault();
   const listElement = document.createElement('li');
+  const horz = document.createElement('hr');
+
+  const name = document.createElement('h3')
+  name.textContent = this.name.value;
+  listElement.appendChild(name);
+  listElement.appendChild(horz);
 
   const date = document.createElement('p')
   date.textContent = this.date.value;
   listElement.appendChild(date);
-
-  const name = document.createElement('p')
-  name.textContent = this.name.value;
-  listElement.appendChild(name);
 
   const venue = document.createElement('p')
   venue.textContent = this.venue.value;
@@ -40,7 +42,9 @@ const handleFormSubmit = function(event) {
   this.reset();
 };
 
-const handleButtonClick = function() {
-  const eventList = document.querySelector('#social-list');
-  eventList.innerHTML = '';
-};
+const handleDeleteAllClick = function (event) {
+  const listElement = document.querySelector('#social-list');
+  listElement.innerHTML = '';
+}
+
+

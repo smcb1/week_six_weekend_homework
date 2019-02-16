@@ -1,58 +1,113 @@
 body {
-  font-family: Palatino;
-}
-
-.container {
-  flex-wrap: wrap;
+  font-family: 'Rokkitt', serif;
+  background-color: #eee;
 }
 
 h1 {
-  color: #666;
+  color: #333;
+  padding-left: 30px;
+}
+
+h3 {
+  color: #222;
+}
+
+hr {
+  color: #eee;
+}
+
+ul li { 
+  margin: 15px;
+  display: inline-block; 
+}
+
+.page-wrapper {
+  margin: 25px;
+  background-color: #ddd;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.blue-column {
+  padding: 15px 15px;
+  background-color: #1DA1F2;
+  height: 100%;
+}
+
+.white-column {
+  padding: 15px 15px;
+  background-color: #eee;
+  height: 100%;
 }
 
 #form-wrapper {
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: row;
 }
 
 .form-item {
   margin-right: 1.8rem;
+  padding: 10px;
 }
 
+.table {
+  display: table;   /* Allow the centering to work */
+  margin: 0 auto;
+}
+
+ul#social-lis {
+  min-width: 696px;
+  list-style: none;
+  padding-top: 20px;
+  }
+  ul#social-lis li {
+    display: inline;
+  }
+
 input[type=text] {
-    padding:5px;
-    border:2px solid #ccc;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+  padding:5px;
+  border:2px solid #ccc;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
 
 input[type=text]:focus {
-    border-color:#333;
+  border-color:#333;
 }
 
 input[type=submit] {
-  margin: 10px;
   padding: 5px 5px;
-  color: white;
+  color: #eee;
   font-size: 16px;
-  background: #444;
-  width: 50%;
+  background: #333;
+  width: 100%;
   border: 0 none;
   cursor:pointer;
-  -webkit-border-radius: .1px;
-  border-radius: .1px;
+  -webkit-border-radius: .4px;
+  border-radius: .4px;
 }
 
 .button {
-  margin: 10px;
   padding: 5px 5px;
-  color: white;
+  color: #222;
   font-size: 16px;
-  background: #444;
-  width: 50%;
+  background: #eee;
+  width: 100%;
   border: 0 none;
   cursor:pointer;
-  -webkit-border-radius: .1px;
-  border-radius: .1px;
+  -webkit-border-radius: .4px;
+  border-radius: .4px;
 }
